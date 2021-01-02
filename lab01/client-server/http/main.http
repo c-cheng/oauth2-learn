@@ -1,0 +1,15 @@
+GET http://localhost:80/api/item?id=99
+Accept: application/json
+
+###
+### 1. 获取访问令牌
+POST http://localhost:8080/oauth/token
+Content-Type: application/x-www-form-urlencoded
+Authorization: basic clientdevops 789
+
+grant_type=client_credentials&scope=devops
+
+
+### 2. 调用API
+GET http://localhost:8080/api/userlist
+Authorization: bearer f1b211ff-9fa6-40cd-b196-ece0765540c8
