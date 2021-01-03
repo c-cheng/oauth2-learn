@@ -5,7 +5,10 @@ Authorization: basic clientdevops 789
 
 grant_type=client_credentials&scope=devops
 
+> {%
+client.global.set("access_token", response.body.access_token);
+%}
 
 ### 2. 调用API
 GET http://localhost:8080/api/userlist
-Authorization: bearer f1b211ff-9fa6-40cd-b196-ece0765540c8
+Authorization: bearer {{access_token}}
