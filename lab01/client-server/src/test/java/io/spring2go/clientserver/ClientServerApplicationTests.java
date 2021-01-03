@@ -1,4 +1,4 @@
-package io.spring2go.clientcredentialsserver;
+package io.spring2go.clientserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
