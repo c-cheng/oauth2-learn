@@ -1,0 +1,8 @@
+### 1. 获取访问令牌
+GET {{apiBaseUrl}}/oauth/authorize?client_id=clientapp&redirect_uri=http://localhost:9001/callback&response_type=token&scope=read_userinfo&state=abc
+Authorization: Basic cc huairen
+
+### 2. 调用API
+GET {{apiBaseUrl}}/api/userinfo
+Authorization: Bearer ce300a82-cdfa-4efd-b33f-7b98836fd009
+
