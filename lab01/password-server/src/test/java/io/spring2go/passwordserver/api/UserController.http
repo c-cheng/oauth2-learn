@@ -1,0 +1,17 @@
+
+### 1. 获取访问令牌
+POST {{apiBaseUrl}}/oauth/token
+Authorization: Basic clientapp 112233
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&username=cc&password=huairen&scope=read_userinfo
+
+> {%
+client.global.set("access_token", response.body.access_token);
+%}
+
+### 2. 调用API
+GET {{apiBaseUrl}}/api/userinfo
+Authorization: Bearer {{access_token}}
+
